@@ -169,10 +169,16 @@ Use the getReviewsByRating function below to do the following:
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
   ]
 */
-
- function getReviewByRating(/* code here */) {
-    /* code here */
+const newArray = [];
+ function getReviewByRating(array, number) {
+   for(let i = 0; i < array.length; i++){
+     if(array[i].rating === number || array[i].rating === number + .5){
+       newArray.push(array[i]);
+     }
+   }
+   return newArray;
   }
+  console.log(getReviewByRating(reviews,4));
 
   
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
