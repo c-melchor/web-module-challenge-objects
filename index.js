@@ -1,4 +1,4 @@
-import { arrayExpression } from "@babel/types";
+import { arrayExpression, objectExpression, directive } from "@babel/types";
 
 /*MAKE SURE TO RETURN ALL OF THE ANSWERS ON THESE TASKS, IF YOU DON'T, THE AUTOGRADER WILL NOT WORK*/
 
@@ -194,6 +194,7 @@ Use the getLongReviews function below to do the following:
   ]
 */
 
+
 let longReviews =[];
 function getLongReviews(array) {
   for(let i = 0; i < array.length; i++){
@@ -224,10 +225,17 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
-    /* code here */
-    
+function carMaker(odometer) {
+  const car1 = {
+    speed: odometer,
+  drive:function(distance){
+    this.speed = this.speed + distance
+  }
+  }
+  return car1;
 }
+console.log(carMaker(100));
+
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
