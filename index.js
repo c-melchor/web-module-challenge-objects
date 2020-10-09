@@ -229,12 +229,12 @@ function carMaker(odometer) {
   const car1 = {
     speed: odometer,
   drive:function(distance){
-    this.speed = this.speed + distance
+    return this.speed = this.speed + distance
   }
   }
   return car1;
 }
-console.log(carMaker(100));
+console.log(carMaker(100).drive(50));
 
 
 
